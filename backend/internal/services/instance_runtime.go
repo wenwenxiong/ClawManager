@@ -47,15 +47,17 @@ func buildRuntimeConfig(instanceType, osType, osVersion string, registry, tag *s
 		config.Image = "lscr.io/linuxserver/webtop:ubuntu-xfce"
 		config.Port = 3001
 		config.MountPath = "/config"
+		config.Env = map[string]string{
+			"TITLE":     "ClawManager Desktop",
+			"SUBFOLDER": "/",
+		}
 	case "webtop":
 		config.Image = "lscr.io/linuxserver/webtop:ubuntu-xfce"
 		config.Port = 3001
 		config.MountPath = "/config"
 		config.Env = map[string]string{
-			"CUSTOM_USER": "abc",
-			"PASSWORD":    "",
-			"TITLE":       "ClawManager Webtop",
-			"SUBFOLDER":   "/",
+			"TITLE":     "ClawManager Webtop",
+			"SUBFOLDER": "/",
 		}
 	case "openclaw":
 		config.MountPath = "/config"
@@ -63,6 +65,10 @@ func buildRuntimeConfig(instanceType, osType, osVersion string, registry, tag *s
 			config.Image = defaultSystemImageSettings["openclaw"]
 		} else {
 			config.Image = fmt.Sprintf("%s/%s:%s", defaultRegistry, "openclaw-desktop", defaultTag)
+		}
+		config.Env = map[string]string{
+			"TITLE":     "ClawManager Desktop",
+			"SUBFOLDER": "/",
 		}
 	case "debian":
 		config.Image = fmt.Sprintf("%s/%s:%s", defaultRegistry, "debian-desktop", defaultTag)
@@ -94,12 +100,10 @@ func defaultMountPathForInstanceType(instanceType string) string {
 
 func defaultEnvForInstanceType(instanceType string) map[string]string {
 	switch instanceType {
-	case "webtop":
+	case "ubuntu", "webtop", "openclaw":
 		return map[string]string{
-			"CUSTOM_USER": "abc",
-			"PASSWORD":    "",
-			"TITLE":       "ClawManager Webtop",
-			"SUBFOLDER":   "/",
+			"TITLE":     "ClawManager Desktop",
+			"SUBFOLDER": "/",
 		}
 	default:
 		return map[string]string{}
