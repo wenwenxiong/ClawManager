@@ -215,6 +215,13 @@ Notes:
 - `Max GPU Count (optional)` is optional
 - all other columns are required
 
+## User Guide
+
+This guide is an operations-oriented handbook for ClawManager deployment and first-time use.
+It covers environment preparation, k3s/Kubernetes deployment paths, web startup, first login setup, OpenClaw instance creation, common console modules, and quick troubleshooting tips.
+
+- [English User Guide](./docs/use_guide_en.md)
+
 
 ## License
 

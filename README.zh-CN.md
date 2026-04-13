@@ -218,6 +218,13 @@ Username,Email,Role,Max Instances,Max CPU Cores,Max Memory (GB),Max Storage (GB)
 - `Max GPU Count (optional)` 为可选项
 - 其他列均为必填项
 
+## 使用手册
+
+本手册是 ClawManager 的部署与上手操作文档。
+内容涵盖环境准备、k3s/标准 Kubernetes 部署流程、Web 页面启动、首次登录初始化、OpenClaw 实例创建、控制台核心模块说明，以及常见问题与排查建议。
+
+- [简体中文使用手册](./docs/use_guide_cn.md)
+
 ## 许可证
 
 本项目基于 MIT License 发布。

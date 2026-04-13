@@ -211,6 +211,13 @@ Username,Email,Role,Max Instances,Max CPU Cores,Max Memory (GB),Max Storage (GB)
 - `Max GPU Count (optional)` は任意です
 - それ以外の列は必須です
 
+## 利用ガイド
+
+このガイドは、ClawManager のデプロイと初期利用のための運用ドキュメントです。
+環境準備、k3s/標準 Kubernetes での導入手順、Web 起動、初回ログイン設定、OpenClaw インスタンス作成、コンソール主要機能、よくある問題の対処を簡潔にまとめています。
+
+- [日本語利用ガイド](./docs/use_guide_ja.md)
+
 ## ライセンス
 
 このプロジェクトは MIT License の下で公開されています。

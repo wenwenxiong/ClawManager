@@ -211,6 +211,13 @@ Hinweise:
 - `Max GPU Count (optional)` ist optional
 - alle anderen Spalten sind erforderlich
 
+## Benutzerhandbuch
+
+Dieses Handbuch ist die Betriebsanleitung fuer Deployment und Erstinbetriebnahme von ClawManager.
+Es beschreibt kurz die Umgebungsvorbereitung, k3s/Standard-Kubernetes-Bereitstellung, Web-Start, Initialisierung nach dem ersten Login, OpenClaw-Instanzerstellung, wichtige Konsolenmodule sowie typische Probleme und Loesungswege.
+
+- [Deutsches Benutzerhandbuch](./docs/use_guide_de.md)
+
 ## Lizenz
 
 Dieses Projekt ist unter der MIT License veroeffentlicht.
